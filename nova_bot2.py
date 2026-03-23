@@ -50,13 +50,3 @@ if __name__ == '__main__':
     app.add_handler(CallbackQueryHandler(button))
     print("Бот запущен!")
     app.run_polling()
-
-python-telegram-bot==20.4
-
-git init
-git add .
-git commit -m "Initial commit"
-
-git branch -M main
-git remote add origin https://github.com/<nova_bot>/nova_bot.git
-git push -u origin main

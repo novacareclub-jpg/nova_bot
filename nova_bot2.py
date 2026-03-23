@@ -3,7 +3,7 @@ from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandler, ContextTypes
 
 # Получаем токен из переменной окружения
-TOKEN = os.environ.get("8750176149:AAE0w5gbuLgMm0NcuOt1HOOJXj1XZ6ZNAw4")
+TOKEN = "8750176149:AAE0w5gbuLgMm0NcuOt1HOOJXj1XZ6ZNAw4"
 
 # Ссылки
 LINK_УСЛОВИЯ = "https://bedecked-city-56b.notion.site/NOVA-Terms-of-Participation-3269248859738001aeccc5db56fa767a"
@@ -11,6 +11,13 @@ LINK_ОПЛАТА = "https://whop.com/nova-woman-s-club/nova-ed/"
 
 # Команда /start
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    welcome_text = """
+Добро пожаловать в пространство NOVA 🤍
+Здесь начинается твой новый путь — мягко, бережно и по-настоящему.
+Ты в окружении женщин, которые выбирают рост, глубину и себя.
+
+Выбери нужный раздел ниже, чтобы начать✨
+"""
     keyboard = [
         [InlineKeyboardButton("Вступить", callback_data="join")],
         [InlineKeyboardButton("Поддержка", callback_data="support")],

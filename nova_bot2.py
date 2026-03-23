@@ -19,9 +19,9 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 Выбери нужный раздел ниже, чтобы начать✨
 """
     keyboard = [
-        [InlineKeyboardButton("Вступить", callback_data="join")],
-        [InlineKeyboardButton("Поддержка", callback_data="support")],
-        [InlineKeyboardButton("Правила", url=LINK_УСЛОВИЯ)]
+        [InlineKeyboardButton("✅ Вступить", callback_data="join")],
+        [InlineKeyboardButton("💬 Поддержка", callback_data="support")],
+        [InlineKeyboardButton("📜 Правила", url=LINK_УСЛОВИЯ)]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
     await update.message.reply_text("Добро пожаловать в NOVA Club!", reply_markup=reply_markup)

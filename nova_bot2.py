@@ -33,7 +33,7 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await query.answer()
         if query.data == "join":
             keyboard = [
-                [InlineKeyboardButton("Оплата", url=LINK_ОПЛАТА)] ,
+                [InlineKeyboardButton("💳 Оплата", url=LINK_ОПЛАТА)] ,
                 [InlineKeyboardButton("Условия", url=LINK_УСЛОВИЯ)] 
             ]
             reply_markup = InlineKeyboardMarkup(keyboard)

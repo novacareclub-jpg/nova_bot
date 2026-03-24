@@ -20,7 +20,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 """
     keyboard = [
         [InlineKeyboardButton("✅ Вступить", callback_data="join")],
-        [InlineKeyboardButton("💬 Поддержка", callback_data="support")],
+        [InlineKeyboardButton("💬 Поддержка", url="https://t.me/Nova_ssuport")],
         [InlineKeyboardButton("📜 Правила", url=LINK_УСЛОВИЯ)]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
@@ -33,13 +33,11 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await query.answer()
         if query.data == "join":
             keyboard = [
-                [InlineKeyboardButton("Условия", url=LINK_УСЛОВИЯ)],
-                [InlineKeyboardButton("Оплата", url=LINK_ОПЛАТА)]
+                [InlineKeyboardButton("Оплата", url=LINK_ОПЛАТА)] ,
+                [InlineKeyboardButton("Условия", url=LINK_УСЛОВИЯ)] 
             ]
             reply_markup = InlineKeyboardMarkup(keyboard)
             await query.edit_message_text("Выберите:", reply_markup=reply_markup)
-        elif query.data == "support":
-            await query.edit_message_text("Чат с поддержкой пока не создан.")
     except Exception as e:
         print("Игнорируем старый callback:", e)
 
